@@ -38,8 +38,9 @@ export const ListBlock: Block = {
 			type: 'relationship',
 			relationTo: 'work',
 			admin: {
-				condition: ({ siblingData }) => siblingData.listType === 'work',
+				condition: (_, siblingData) => siblingData.listType === 'work',
 			},
+			hasMany: true,
 		},
 		{
 			name: 'posts',
@@ -47,8 +48,9 @@ export const ListBlock: Block = {
 			type: 'relationship',
 			relationTo: 'posts',
 			admin: {
-				condition: ({ siblingData }) => siblingData.listType === 'posts',
+				condition: (_, siblingData) => siblingData.listType === 'posts',
 			},
+			hasMany: true,
 		},
 		{
 			name: 'links',
@@ -60,7 +62,7 @@ export const ListBlock: Block = {
 			},
 			minRows: 1,
 			admin: {
-				condition: ({ siblingData }) => siblingData.listType === 'links',
+				condition: (_, siblingData) => siblingData.listType === 'links',
 			},
 			fields: [
 				{
@@ -94,7 +96,7 @@ export const ListBlock: Block = {
 							type: 'relationship',
 							relationTo: 'pages',
 							admin: {
-								condition: ({ siblingData }) =>
+								condition: (_, siblingData) =>
 									siblingData.linkType === 'internal',
 							},
 						},
@@ -103,7 +105,7 @@ export const ListBlock: Block = {
 							label: 'External Link',
 							type: 'text',
 							admin: {
-								condition: ({ siblingData }) =>
+								condition: (_, siblingData) =>
 									siblingData.linkType === 'external',
 							},
 						},
