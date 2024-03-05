@@ -2,6 +2,9 @@ import { CollectionConfig } from 'payload/types';
 
 export const Work: CollectionConfig = {
 	slug: 'work',
+	version: {
+		drafts: true,
+	},
 	fields: [
 		{
 			name: 'title',
