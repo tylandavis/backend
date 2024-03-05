@@ -5,6 +5,9 @@ import { TextBlock } from '../blocks/TextBlock';
 
 export const Posts: CollectionConfig = {
 	slug: 'posts',
+ versions: {
+  drafts: true,
+ },
 	fields: [
 		{
 			name: 'title',
