@@ -8,6 +8,9 @@ export const Pages: CollectionConfig = {
 	access: {
 		read: () => true,
 	},
+	versions: {
+		drafts: true,
+	},
 	admin: {
 		useAsTitle: 'title',
 	},
