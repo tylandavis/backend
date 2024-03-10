@@ -14,7 +14,7 @@ export const TextBlock: Block = {
 			type: 'text',
 		},
 		{
-			name: 'Text',
+			name: 'text',
 			label: 'Text',
 			type: 'richText',
 			required: true,
